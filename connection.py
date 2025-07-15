@@ -11,16 +11,19 @@ print("Client connected {}".format(url))
 
 while True:
     # Note: AS4.8 have ns = 6 and AS4.12 have ns = 11
-    Tag1 = client.get_node("ns=6;s=::AsGlobalPV:CLP.Cal.Actpos")
+    Tag1 = client.get_node("ns=6;s =::AsGlobalPV:gVisuPara.MaxNoExt")
+    # ns = 6;s =::AsGlobalPV: gVisuPara.MaxNoExt
+    #ns=6;s=::AsGlobalPV:gVisuPara.TotalExtOuput
     Tag1Var1 = Tag1.get_value()
     pass
-    print("Rajoo OPC variable {}".format(Tag1Var1))
-    print("Rajoo OPC variable {}")
+    print("MaxNoExt {}".format(Tag1Var1))
+    print("Rajoo OPC variable1 {}")
     #
-    # Tag2 = client.get_node("ns=11;s=::AsGlobalPV:EJT.Cal.Actpos")
-    # Tag2Var2 = Tag2.get_value()
-    # pass
-    # print("Ejector Position {}".format(Tag2Var2))
+    Tag2 = client.get_node("ns=6;s=::AsGlobalPV:gVisuPara.TotalExtOuput")
+    Tag2Var2 = Tag2.get_value()
+    pass
+    print("TotalExtOuput {}".format(Tag2Var2))
+    print("Rajoo OPC variable2 {}")
     #
     # Tag3 = client.get_node("ns=11;s=::AsGlobalPV:INJ[0].Cal.Actpos")
     # Tag3Var3 = Tag3.get_value()
