@@ -6,7 +6,7 @@ import time
 url = "opc.tcp://172.17.1.32:4840" #Enter Rajoo IP address
 client = Client(url)
 
-client.connect()
+# client.connect()
 print("Client connected {}".format(url))
 
 # while True:
